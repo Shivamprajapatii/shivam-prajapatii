@@ -23,17 +23,19 @@ const listingsRouter = require("./routes/listing.js");
 const userRouter = require("./routes/user.js");
 
 
+// const db_Url = "mongodb://localhost:27017/wanderlust";
 
 const db_Url = process.env.ATLASDB_URL;
 
-main()
+// Commentes 
+main() 
     .then(() => {
         console.log("Database Connected.")
     })
     .catch((err) => {
         console.log(err);
     });
-
+// Commnents 
 async function main() {
     await mongoose.connect(db_Url);
 }
